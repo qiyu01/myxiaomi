@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米账号-注册</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/setmsg.js"></script>
+</head>
+
+<body>
+    <!-- 页面总包含框，背景#e8e8e8浅灰色 -->
+    <div class="register-wrapper">
+
+        <!-- 中间白色背景大框 -->
+        <div class="register-container">
+            <!-- logo框 -->
+            <div class="logo">
+                <a href="javascript:void(0)"><img src="images/login/milogo.png" alt=""></a>
+            </div>
+            <!-- 表单大标题 -->
+            <div class="title">
+                <h4>注册小米帐号</h4>
+
+            </div>
+            <!-- 国家选择，手机输入 提交按钮包含框  -->
+            <div class="form-box">
+                <!-- 国家选择 -->
+                <div class="country">
+                    <div class="label">国家/地区</div>
+                    <div class="select-wrapper">
+                        <div class="select-country">中国</div>
+                        <div class="btn-country">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <!-- 国家选择菜单栏，默认隐藏 -->
+                        <div class="select-menu country-menu">
+                            <div class="select-menu-div"><input type="text" class="select-menu-input"></div>
+                            <dl>
+                                <dt class="select-menu-dt">A</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <span>阿富汗</span>
+                                            <span>+93</span>
+                                        </li>
+                                        <li>
+                                            <span>阿尔尼巴亚</span><span>+355</span>
+                                        </li>
+                                        <li>
+                                            <span>阿尔及利亚</span><span>+213</span>
+                                        </li>
+                                        <li>
+                                            <span>美属萨摩亚</span><span>+1</span>
+                                        </li>
+                                        <li>
+                                            <span>美属萨摩亚</span><span>+93</span>
+                                        </li>
+                                        <li>
+                                            <span>美属萨摩亚</span><span>+93</span>
+                                        </li>
+                                        <li>
+                                            <span>美属萨摩亚</span><span>+93</span>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="select-menu-dt">A</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <span>阿富汗</span><span>+93</span>
+                                        </li>
+                                        <li>
+                                            <span>阿尔尼巴亚</span><span>+93</span>
+                                        </li>
+                                        <li>
+                                            <span>阿尔及利亚</span> <span>+93</span>
+                                        </li>
+                                        <li>
+                                            <span>美属萨摩亚</span><span>+93</span>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        成功注册帐号后，国家/地区将不能被修改
+                    </div>
+
+                </div>
+                <!-- 手机号码输入 -->
+                <div class="phone">
+                    <div class="label">手机号码</div>
+                    <div class="select-wrapper phone-select-wrapper">
+                        <div class="btn-phone">+86</div>
+                        <input class="select-phone" placeholder="请输入手机号码" type="text" />
+                        <div class="select-menu phone-menu" id="slideDown">
+                            <div class="select-menu-div"><input type="text" class="select-menu-input"></div>
+                            <dl>
+                                <dt class="select-menu-dt">A</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            阿富汗<span>+93</span>
+                                        </li>
+                                        <li>
+                                            阿尔尼巴亚<span>+355</span>
+                                        </li>
+                                        <li>
+                                            阿尔及利亚<span>+213</span>
+                                        </li>
+                                        <li>
+                                            美属萨摩亚<span>+1</span>
+                                        </li>
+                                        <li>
+                                            美属萨摩亚<span>+213</span>
+                                        </li>
+                                        <li>
+                                            美属萨摩亚<span>+213</span>
+                                        </li>
+                                        <li>
+                                            美属萨摩亚<span>+213</span>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="select-menu-dt">A</dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            阿富汗<span>+263</span>
+                                        </li>
+                                        <li>
+                                            阿尔尼巴亚<span>+13</span>
+                                        </li>
+                                        <li>
+                                            阿尔及利亚<span>+213</span>
+                                        </li>
+                                        <li>
+                                            美属萨摩亚<span>+213</span>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="msg">
+
+                        <img src="images/login/err.png" alt="">
+                        <span> </span>
+
+
+                    </div>
+
+                </div>
+                <!-- 提交按钮 -->
+                <button class="" id="register-btn">立即注册</button>
+
+            </div>
+            <!-- 用户协议 -->
+            <div class="privacy">已阅读并同意：小米
+                <a href="">用户协议</a> 和
+                <a href=""> 隐私政策</a>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer" id="register-footer">
+            <div class="footer_link">
+                <ul>
+                    <li>
+                        <a href="" class="active">简体</a> |
+                    </li>
+                    <li>
+                        <a href="">繁体</a> |
+                    </li>
+                    <li>
+                        <a href="">English</a> |
+                    </li>
+                    <li>
+                        <a href="">常见问题</a> |
+                    </li>
+                    <li>
+                        <a href="">隐私政策</a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright">
+                小米公司版权所有-京ICP备10046444-
+                <a><img src="images/login/police.png" alt="" />京公网安备11010802020134号</a>-京ICP证110507号
+            </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

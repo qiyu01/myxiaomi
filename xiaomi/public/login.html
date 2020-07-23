@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米账号-登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/setmsg.js"></script>
+</head>
+
+<body>
+    <!-- 头部logo -->
+    <div class="header">
+        <a href="index.html"><img src="images/login/logo.png" alt=""></a>
+    </div>
+
+    <!-- 登录框banner -->
+    <div class="main">
+        <div class="wrapper">
+            <!-- 登录框盒子 -->
+            <div class="login_box">
+                <!-- 登录框盒子顶部tab -->
+                <div class="login_tab">
+                    <button type="button" class="login_tab1 active">帐号登录</button>
+                    <span class="line"></span>
+                    <button type="button" class="login_tab2">扫码登录</button>
+                </div>
+                <!--登录框 输入表单form1(账号登陆) -->
+                <form action="#" class="form1">
+                    <div class="input_wrapper input_wrapper1"><input type="text" class="name" placeholder="邮箱/手机号码/小米ID" id="loginUname">
+                    </div>
+                    <div class="input_wrapper input_wrapper2"> <input type="password" class="pwd" placeholder="密码" id="loginUpwd">
+                    </div>
+
+                    <div class="msg">
+                        <img src="images/login/err.png" alt="">
+                        <span></span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="button" id="uname-login-btn">登录</button>
+                    </div>
+
+
+
+                    <div class="other_panel">
+                        <!-- 手机登录和注册 -->
+                        <div>
+                            <div class="sms_link">
+                                <a href="javascript:void(0);" id="phone_login">手机短信登录/注册</a>
+                            </div>
+                            <div class="register_link">
+                                <a href="register.html">立即注册</a>
+                                <span>|</span>
+                                <a href="">忘记密码？</a>
+                            </div>
+
+                        </div>
+                        <!-- 其他登录方式 -->
+                        <div class="other_link">
+                            <fieldset>
+                                <legend>
+                                    其他方式登录
+                                </legend>
+                            </fieldset>
+                            <div class="link_icon">
+                                <a class="qq"><img src="images/login/qq.png" alt=""></a>
+                                <a class="weibo"><img src="images/login/wb.png" alt=""></a>
+                                <a class="zfb"><img src="images/login/zfb.png" alt=""></a>
+                                <a class="weixin"><img src="images/login/wechat.png" alt=""></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </form>
+                <!--登录框 输入表单form2，手机登陆，默认隐藏-->
+                <form action="#" class="form2">
+                    <div class="input_wrapper input_wrapper1"><label class="label">+86</label><input type="text" class="name" placeholder="手机号码">
+                    </div>
+                    <div class="input_wrapper input_wrapper2"> <input type="password" class="pwd" placeholder="短信验证码" id="verif-code"> <label class="label">获取验证码</label>
+                    </div>
+                    <div class="msg">
+                        <img src="images/login/err.png" alt="">
+                        <span></span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="button" id="phone-login-btn">登录</button>
+                    </div>
+
+
+
+                    <div class="other_panel">
+                        <!-- 手机登录和注册 -->
+                        <div>
+                            <div class="sms_link">
+                                <a href="javascript:void(0);" id="uname_login">用户名密码登录
+                                
+                                
+                                </a>
+                            </div>
+                            <div class="register_link">
+
+                                <a href="">收不到验证码？</a>
+                            </div>
+
+                        </div>
+                        <!-- 其他登录方式 -->
+                        <div class="other_link">
+                            <fieldset>
+                                <legend>
+                                    其他方式登录
+                                </legend>
+                            </fieldset>
+                            <div class="link_icon">
+                                <a class="qq"><img src="images/login/qq.png" alt=""></a>
+                                <a class="weibo"><img src="images/login/wb.png" alt=""></a>
+                                <a class="zfb"><img src="images/login/zfb.png" alt=""></a>
+                                <a class="weixin"><img src="images/login/wechat.png" alt=""></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </form>
+
+                <!-- 扫码登陆tab内容框（默认隐藏） -->
+                <div class="login_qr">
+                    <img src="images/login/erweima.png" alt="">
+                    <p>使用<span>小米商城APP</span>扫一扫<br> 小米手机可打开「设置」>「小米帐号」扫码登录
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="footer_link">
+            <ul>
+                <li>
+                    <a href="" class="active">简体</a> |
+                </li>
+                <li>
+                    <a href="">繁体</a> |
+                </li>
+                <li>
+                    <a href="">English</a> |
+                </li>
+                <li>
+                    <a href="">常见问题</a> |
+                </li>
+                <li>
+                    <a href="">隐私政策</a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright">
+            小米公司版权所有-京ICP备10046444-
+            <a><img src="images/login/police.png" alt="" />京公网安备11010802020134号</a>-京ICP证110507号
+        </p>
+
+    </div>
+</body>
+
+</html>

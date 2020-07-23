@@ -1,0 +1,83 @@
+/* 声明字体图标 */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+em{
+    font-style: normal;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: #757575;
+}
+img{
+    border: 0;
+}
+
+.container{
+    width: 1226px;
+    margin: 0 auto;
+}
+.container::before,.container::after{
+    content: " ";
+    display: table;
+
+}
+.container::after{
+    clear: both;
+}
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.hide{
+    display: none;
+}
+.border-info{
+    border-color: #ff6700!important;
+}
+
+.span4{
+    width: 234px;
+    float: left;
+    margin-left: 14px;
+    min-height: 1px;
+}
+.span16{
+    width: 978px;
+    min-height: 1px;
+}
+
+.rainbow-item-1{
+    border-top-color: #e53935;
+}
+.rainbow-item-2{
+    border-top-color: #00c0a5;
+}
+.rainbow-item-3{
+    border-top-color: #ffac13;
+}
+.rainbow-item-4{
+    border-top-color: #83c44e;
+}
+.hide{
+    display: none!important;
+}

@@ -1,0 +1,717 @@
+/* css reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ol ul {
+    list-style: none;
+}
+
+body {
+    font-size: 14px;
+    font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+}
+
+
+/* 输入错误提示--登陆页和注册页通用样式 */
+
+.msg {
+    display: none;
+    color: #ff6700;
+    width: 348px;
+    margin: 0 auto;
+}
+
+.msg img {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.err-border {
+    border-color: #ff6700!important;
+}
+
+.header {
+    width: 1130px;
+    height: 98px;
+    margin: 0 auto;
+}
+
+.main {
+    height: 588px;
+    background: url(../images/login/banner.jpg);
+    background-position: -568px 0px;
+}
+
+.wrapper {
+    width: 1130px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.login_box {
+    float: right;
+    width: 410px;
+    height: 558px;
+    background-color: #fff;
+    margin-top: 32px;
+}
+
+.login_tab {
+    height: 82px;
+    padding: 27px 0 24px;
+    font-size: 24px;
+    font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+    color: #666;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.login_tab button {
+    font-size: 24px;
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.login_tab button.active {
+    color: #f56600;
+}
+
+.login_tab button:hover {
+    color: #f56600;
+}
+
+.login_tab .line {
+    width: 2px;
+    height: 29px;
+    color: #e0e0e0;
+    margin: 0 42px 0 36px;
+    border: 1px solid #e0e0e0;
+}
+
+
+/* 用户名密码登陆表单输入框 ----默认显示*/
+
+.login_box form .input_wrapper {
+    width: 348px;
+    height: 50px;
+    /* background: #e8f0fe; */
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+}
+
+.login_box form .input_wrapper input {
+    border: 0;
+    line-height: 22px;
+    padding: 13px 16px 13px 14px;
+    width: 100%;
+}
+
+.login_box form .input_wrapper1 {
+    margin-bottom: 14px;
+}
+
+.login_box form .input_wrapper2 {
+    margin-bottom: 14px;
+}
+
+.login_box form .btn-wrapper {
+    padding-top: 14px;
+}
+
+.login_box form button[type="button"] {
+    background-color: #ff6700;
+    width: 348px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    border: 0;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 手机登陆表单form2---默认隐藏 */
+
+.login_box .form2 {
+    display: none;
+}
+
+.login_box .form2 .input_wrapper1 input {
+    width: 80%;
+    height: 48px;
+}
+
+.login_box .form2 .input_wrapper1 label {
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    width: 20%;
+    height: 48px;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 17px;
+}
+
+.login_box .form2 .input_wrapper2 input {
+    width: 68%;
+    height: 48px;
+}
+
+.login_box .form2 .input_wrapper2 label {
+    display: inline-block;
+    color: #003ab5;
+    border-left: 1px solid #ddd;
+    width: 30%;
+    height: 48px;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 14px;
+    cursor: pointer;
+}
+
+
+/* 二维码登陆框---默认隐藏 */
+
+.login_box .login_qr {
+    display: none;
+    padding-top: 120px;
+    text-align: center;
+}
+
+.login_box .login_qr p {
+    margin: 15px 0;
+    color: #757575;
+}
+
+.login_box .login_qr p span {
+    color: #ff6700;
+}
+
+.login_box .other_panel {
+    width: 348px;
+    margin: 0 auto;
+}
+
+.login_box .other_panel .sms_link {
+    float: left;
+}
+
+.login_box .other_panel .sms_link a {
+    color: #ff6700;
+}
+
+.login_box .other_panel .register_link {
+    float: right;
+}
+
+.login_box .other_panel .register_link a,
+.login_box .other_panel .register_link span {
+    color: #999;
+}
+
+.login_box .other_panel .other_link {
+    clear: both;
+    padding-top: 122px;
+}
+
+.login_box .other_panel .other_link fieldset {
+    height: 30px;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.login_box .other_panel .other_link legend {
+    color: #bbb;
+    text-align: center;
+}
+
+.login_box .other_panel .link_icon {
+    text-align: center;
+}
+
+.login_box .other_panel .link_icon a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+.login_box .link_icon a img {
+    width: 30px;
+    height: 30px;
+}
+
+.login_box .link_icon a:nth-child(4) img {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* 页脚 */
+
+.footer {
+    color: #757575;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.footer_link ul li {
+    display: inline-block;
+}
+
+.footer_link ul li a {
+    color: #757575;
+    padding: 0 9px;
+}
+
+.footer_link ul li a.active {
+    color: #333;
+}
+
+.footer p {
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+
+/* 注册页面样式 */
+
+.register-wrapper {
+    background-color: #f9f9f9;
+    height: 760px;
+    padding-top: 160px;
+}
+
+.register-container {
+    width: 854px;
+    height: 550px;
+    padding: 0 34px 34px 30px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.register-container .logo {
+    width: 790px;
+    height: 88px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.register-container .title h4 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+}
+
+
+/* 国家选择，手机输入 提交按钮包含框  */
+
+.register-container .form-box {
+    width: 350px;
+    height: 388px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.form-box>div {
+    width: 100%;
+}
+
+.form-box .label {
+    color: #333;
+    padding-bottom: 5px;
+}
+
+
+/* 国家选择框 */
+
+.form-box .select-wrapper {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-box .select-country {
+    flex-shrink: 0;
+    width: 290px;
+    height: 42px;
+    line-height: 40px;
+    padding-left: 14px;
+    color: #555;
+    border: 1px solid #e8e8e8;
+}
+
+.form-box .btn-country {
+    width: 42px;
+    height: 42px;
+    line-height: 40px;
+    color: #333;
+    border: 1px solid #e8e8e8;
+    border-left: 0;
+    padding: 2px 0px 0px 12px;
+}
+
+.form-box .btn-country i {
+    font-size: 19px;
+    color: #e8e8e8;
+}
+
+
+/* 国家选择菜单栏，默认隐藏,相对父元素select-wrapper绝对定位 */
+
+.form-box .select-menu {
+    display: none;
+    position: absolute;
+    top: 42px;
+    width: 332px;
+    height: 286px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.form-box .select-menu div {
+    padding: 10px;
+}
+
+.form-box .select-menu input {
+    width: 300px;
+    height: 34px;
+    border: 1px solid #e8e8e8;
+    padding: 5px 10px;
+}
+
+.form-box .select-menu dl dt {
+    background: #fcdecc;
+    padding-left: 10px;
+    margin-bottom: 6px;
+    line-height: 30px;
+    color: #ef5b00 !important;
+}
+
+.form-box .select-menu dl ul li {
+    display: block;
+    padding: 0 10px;
+    height: 39px;
+    line-height: 39px;
+    overflow: hidden;
+    color: #000;
+    border-bottom: 1px solid #e8e8e8;
+    cursor: pointer;
+}
+
+.form-box .select-menu dl ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.form-box .select-menu dl ul li span:last-child {
+    float: right;
+    color: #9d9d9d;
+}
+
+.form-box .country-menu dl ul li span:last-child {
+    display: none;
+}
+
+.form-box .tip {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+
+/* 手机输入框 */
+
+.form-box .btn-phone {
+    flex-shrink: 0;
+    width: 72px;
+    padding: 0 9px;
+    height: 42px;
+    line-height: 40px;
+    color: #333;
+    border: 1px solid #e8e8e8;
+    border-right: 0;
+    position: relative;
+}
+
+.form-box .btn-phone::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    box-sizing: content-box;
+    margin: 17px 0 0 10px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #9d9d9d transparent transparent transparent;
+}
+
+.form-box .select-phone {
+    flex-shrink: 0;
+    width: 261px;
+    height: 42px;
+    line-height: 40px;
+    padding-left: 14px;
+    color: #333;
+    border: 1px solid #e8e8e8;
+}
+
+.phone-select-wrapper {
+    padding-bottom: 15px;
+}
+
+
+/* 注册信息提交按钮 */
+
+.form-box button {
+    /* display: inline-block; */
+    width: 332px;
+    height: 42px;
+    background-color: #f56600;
+    margin-left: -18px;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.form-box button:hover {
+    opacity: 0.9;
+}
+
+.privacy {
+    text-align: center;
+    margin-top: -28px;
+    color: #9d9d9d;
+}
+
+.privacy a {
+    color: #333;
+    font-weight: bold;
+}
+
+#register-footer {
+    padding-top: 140px !important;
+}
+
+
+/* 验证码确认页面 */
+
+.verify-wrapper {
+    width: 332px;
+    margin: 160px auto;
+}
+
+.verify-wrapper .logo {
+    width: 100%;
+    height: 88px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.verify-wrapper .title h4 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+}
+
+.verify-wrapper .verify-tip1 {
+    color: #666;
+    margin-top: 55px;
+    padding-bottom: 10px;
+}
+
+.verify-wrapper .verify-tip1 span:last-child {
+    color: #ff6700
+}
+
+.verify-wrapper .verify-tip2 {
+    color: #666;
+    padding-bottom: 20px;
+}
+
+.verify-wrapper .verify-inputwrapper {
+    padding-bottom: 10px;
+}
+
+.verify-wrapper .verify-inputwrapper input {
+    width: 63%;
+    height: 42px;
+    border: 1px solid #e8e8e8;
+    margin-right: 4%;
+    padding: 10px;
+}
+
+.verify-wrapper .verify-inputwrapper button {
+    width: 25%;
+    height: 42px;
+    border: 1px solid #e8e8e8;
+    vertical-align: bottom;
+    background-color: #fff;
+}
+
+.verify-wrapper .verify-inputwrapper button:hover {
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+
+.verify-wrapper .verify-tip3 {
+    margin-top: 10px;
+    padding-bottom: 15px;
+}
+
+.verify-wrapper .verify-tip3 a {
+    color: #46639c;
+}
+
+.verify-wrapper .verify-btn {
+    padding-bottom: 10px;
+}
+
+.verify-wrapper .verify-btn button {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+}
+
+.verify-wrapper .verify-btn .verify-btn1 {
+    color: #fff;
+    background-color: #ff6700;
+}
+
+.verify-wrapper .verify-btn .verify-btn1:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.verify-wrapper .verify-btn .verify-btn2 {
+    color: #999;
+}
+
+.verify-wrapper .verify-btn .verify-btn2:hover {
+    color: #333;
+    cursor: pointer;
+}
+
+#verifycode-footer {
+    padding-top: 75px !important;
+}
+
+
+/* 设置密码页面 */
+
+.confirm-container {
+    background-color: #f9f9f9;
+    padding-top: 150px;
+}
+
+.confirm-wrapper {
+    width: 854px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.confirm-wrapper .logo {
+    width: 100%;
+    height: 88px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.confirm-wrapper .title h4 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+}
+
+.confirm-form {
+    width: 330px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.confirm-form .confirm-tip1,
+.confirm-form .confirm-tip2 {
+    color: #666;
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.confirm-form .confirm-tip1 span:last-child {
+    color: #ff6700;
+}
+
+.confirm-form .confirm-input1 {
+    margin-top: 15px;
+    padding-bottom: 16px;
+}
+
+.confirm-form .confirm-input2 {
+    padding-bottom: 10px;
+}
+
+.confirm-form .confirm-input input {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    color: #666;
+}
+
+.confirm-form .confirm-btn {
+    margin-top: 15px;
+}
+
+.confirm-form .confirm-btn button {
+    width: 100%;
+    height: 42px;
+    color: #fff;
+    background-color: #ff6700;
+    border: 0;
+}
+
+.confirm-form .confirm-btn button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#confirm-footer {
+    padding-top: 235px !important;
+    padding-bottom: 10px;
+}
