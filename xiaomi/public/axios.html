@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        //0. axios可提前配置共用的服务器端基础路径
+        axios.defaults.baseURL="http://127.0.0.1:8080";
+        //1. 去东哥的新浪云服务器请求学子商城首页6个商品
+        // axios.get(
+        //   "/"
+        // ).then(function(result){
+        //   console.log(result.data);
+        // })
+        //2. 去东哥的新浪云服务器请求学子商场5号商品的详细信息
+        axios.get(
+          "/mi/v1/category_restful",
+          {
+            params:{ 
+              lid:5
+            }
+          }
+        ).then(function(result){
+          console.log(result.data);
+        })
+        //3. 去东哥的新浪云服务器请求登录
+        // axios.post(
+        //   "/mi/v1/category_restful",
+        //   "uname=dingding&upwd=123456"
+        // ).then(function(result){
+        //   console.log(result.data);
+        // })
+      </script>
+    
+</body>
+</html>

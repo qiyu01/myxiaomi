@@ -29,7 +29,8 @@ body{
     color: #424242;
     font-family: sans-serif;
 }
-.site-topbar .topbar-nav a.topbar-download.active::before{
+/* topbar-download */
+.site-topbar .topbar-nav a.topbar-download:hover::before{
     content: "";
     display: inline-block;
     position: absolute;
@@ -58,7 +59,7 @@ body{
     
     
 }
-.site-topbar .topbar-nav a.active>span{
+.site-topbar .topbar-nav a:hover>span{
     height: 148px;
 }
 
@@ -71,7 +72,7 @@ body{
 }
 
 
-
+/* 购物车 */
 .site-topbar .topbar-cart{
     position: relative;
     float: right;
@@ -114,7 +115,7 @@ body{
     line-height: 100px;
     z-index: 2;
 }
-.site-topbar .topbar-cart.active .topbar-cart-menu{
+.site-topbar .topbar-cart:hover .topbar-cart-menu{
     height: 100px;
 }
 
@@ -145,7 +146,7 @@ body{
 .site-header{
     /* background-color: #424242; */
     height: 100px;
-    
+    overflow: visible;
     z-index: 200;
     /* border-bottom: 1px solid #e0e0e0; */
 }
@@ -174,31 +175,34 @@ body{
 .header-logo a span img{
     display: inline-block;
 }
-.header-logo a.active span{
+.header-logo a:hover span{
     left: 3px;
 }
 .site-header .header-nav{
     float: left;
     width: 850px;
+    /* border: 1px solid black; */
 }
 .site-header .header-nav .nav-list{
-    position: relative;
+    /* position: relative; */
     float: left;
     width: 1100px;
     height: 88px;
     margin: 0;
     padding: 12px 0 0 30px;
     font-size: 16px;
+    /* border: 1px solid red; */
 }
 .site-header .nav-category{
     position: relative;
     float: left;
     width: 127px;height: 1px;
     padding-right: 15px;
+    visibility: hidden;
 }
 .site-header .nav-item{
     float: left;
-    position: relative;
+    /* position: relative; */
 }
 .site-header .nav-item>a{
     display: block;
@@ -209,10 +213,92 @@ body{
 .site-header .nav-item>a:hover{
     color: #ff6700;
 }
-.site-header .nav-item .item-children{
+/* header-nav的下拉菜单 */
+
+.site-header .header-nav .item-children{
+    height: 0px;
+    overflow: hidden;
     position: absolute;
-    left: -238px;
+    left: 0;
+    top: 140px;
+    width: 100%;
+    background-color: #fff;
+    transition: height .3s ease-in;
+}
+.site-header .header-nav .item-children.active{
+    height: 230px;
+    box-shadow:0 1px 5px #aaa ;
+}
+
+.site-header .header-nav .item-children .container{
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.site-header .header-nav .item-children ul.children-list{
+    position: absolute;
+    top: 0;left: 0;
+    background-color: #fff;
+    z-index: 0;
+}
+.site-header .header-nav .item-children ul li{
+    display: inline-block;
+    padding: 35px 0 28px 0;
+    text-align: center;
+    cursor: auto;
+}
+.site-header .header-nav .item-children .figure{
+    border-right:1px solid #e0e0e0 ;
+    width: 200px;height: 100px;
+   
+}
+.site-header .header-nav .item-children li:last-child .figure{
+    border-right: none;
+}
+.site-header .header-nav .item-children .title{
+    color: #000;
+    font-size: 12px;
+    margin-top: 30px;
+}
+.site-header .header-nav .item-children .price{
+    color: #ff6700;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* .site-header  .nav-list:hover .item-children{
+    height: 230px;
+    box-shadow:0 1px 5px #aaa ;
+    transition: height .3s ease-in;
+} */
+/* 为了下拉菜单覆盖在下面的轮播图上面，需要改变header的z-index */
+.header{
+    /* z-index 必须添加position才能生效    */
+    position: relative;
+    z-index: 100;
+}
+/* 注意，.item-children是相对.site-header绝对定位 */
+.site-header .nav-item .item-children{
+    /* display: none; */
+    /* height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #fff; */
+    /* left: -238px; */
     /* border: 1px solid red; */
+    /* border-top: 1px solid #333; */
+    /* transition: height .3s ease-in; */
+}
+.site-header .nav-item:hover .item-children{
+    /* display: block; */
+    height: 230px;
+    /* border-top: 1px solid #e0e0e0; */
+    box-shadow:0 1px 5px #aaa ;
+    transition: height .3s ease-in;
 }
 .site-header .nav-item .item-children ul li{
     display: inline-block;
@@ -221,14 +307,10 @@ body{
     cursor: auto;
 }
 .site-header .item-children .container{
-    height: 0;
+    height: 230;
     overflow: hidden;
     transition: height .3s ease-in;
     z-index: 300;
-}
-.site-header.active .item-children .container{
-    height: 231px;
-    /* transition: height .3s ease; */
 }
 .site-header .nav-item .item-children .figure{
     border-right:1px solid #e0e0e0 ;
@@ -248,34 +330,8 @@ body{
     font-size: 12px;
     margin-top: 2px;
 }
-/* 使用header的高度显隐下拉列表 */
-.header{
-    position: relative;
-    height: 140px;
-    z-index: 999;
-    /* z-index: 1000; */
-}
-.site-header{
-    height: 100px;
-    transition: box-shadow 0s ease-in .3s,height .3s ease-in;
-    /* z-index: 2000; */
-    background-color: #fff;
-    /* box-shadow:0 1px 5px #aaa ; */
-    /* border: 1px solid red; */
-    /* overflow: hidden; */
-}
-.site-header.active{
-    height: 330px ;
-    box-shadow:0 1px 5px #aaa ;
-    /* transition: all .3s ease; */
-}
-.site-header>.container{
-    transition: all 0s ease-in;
-    border-bottom-color:#fff ;
-}
-.site-header.active>.container{
-    border-bottom: 1px solid #e0e0e0;
-}
+
+
 
 
 .site-header .header-search{
@@ -1170,7 +1226,10 @@ body{
     position: absolute;
     top: 20px;
     left: 100px;
-    /* display: none; */
+    display: none;
+}
+.site-footer .footer-links .col-contact .follow a:hover img{
+    display: inline-block;
 }
 
 .ir {
