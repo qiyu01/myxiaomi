@@ -1,5 +1,5 @@
 /* 声明字体图标 */
-
+/* 
 @font-face {
     font-family: 'icomoon';
     src: url('../fonts/icomoon.eot?tomleg');
@@ -7,6 +7,11 @@
     font-weight: normal;
     font-style: normal;
     font-display: block;
+} */
+
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
 }
 
 * {

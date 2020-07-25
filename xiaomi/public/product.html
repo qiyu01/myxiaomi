@@ -5,14 +5,337 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- 引入样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
     <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
     <link rel="stylesheet" href="iconfont/iconfont.css">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/cms.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+    <script src="js/dropdown.js"></script>
 </head>
 <body>
-    
+    <div class="header">
+        <!-- 顶部黑色导航栏 -->
+        <div class="site-topbar">
+            <div class="container">
+                <div class="topbar-nav">
+                    <a href="javascriot:void(0);">小米商城</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">MIUI</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">IoT</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">云服务</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">金融</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">有品</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">小爱开发平台</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">企业团购</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">资质证照</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">协议规则</a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);" class="topbar-download">下载app
+                        <span class="appcode">
+                            <img src="images/download.png" alt="">
+                            小米商城APP
+                        </span>
+                    </a>
+                    <span class="sep">|</span>
+                    <a href="javascriot:void(0);">Select Location</a>
+                    
+
+                </div>
+                <div class="topbar-cart">
+                    <a href="#">
+                        <em class="fa fa-cart"></em>
+                        购物车
+                        <span>(0)</span>
+                    </a>
+                    <div class="topbar-cart-menu">
+                        购物车中还没有商品，赶紧选购吧！
+                    </div>
+                </div>
+                <div class="topbar-info">
+                    <a href="javascritp:void(0);">登录</a>
+                    <span class="sep">|</span>
+                    <a href="javascritp:void(0);">注册</a>
+                    <span class="sep">|</span>
+                    <a href="#" class="message">消息通知<i></i></a>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 二级导航栏 -->
+        <div class="site-header">
+            <div class="container">
+                <div class="header-logo">
+                    <a href="#" class="logo">
+                        <span>
+                            <img src="images/mi-home.png" alt="">
+                            <img src="images/mi-logo.png" alt="">
+                        </span>
+                    </a>
+                </div>
+                <div class="header-nav">
+                    <ul class="nav-list clearfix">
+                        <!-- nav-category是小米本身官网的结构，本来是作为详细分类列表菜单的，这里将其功能实现放到banner模块里面的list-category（在大轮播图那里），这里只有剩下占据空间功能。 -->
+                        <!-- 在其他页面又会出现在这里，it`s a mistake -->
+                        <li class="nav-category">
+                            <a><span>
+                                全部商品分类
+                            </span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-target="1000">
+                            <a href="#">
+                            <span>小米手机</span>
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item" data-target="1001">
+                            <a href="#">
+                            <span>Redmi红米</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-target="1002">
+                            <a href="#">
+                            <span>电视</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-target="1003">
+                            <a href="#">
+                            <span>笔记本</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-target="1004">
+                            <a href="#">
+                            <span>家电</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-target="1005">
+                            <a href="#">
+                            <span>路由器</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                            <span>智能硬件</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                            <span>服务</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                            <span>社区</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="item-children">
+                        <div class="container">
+                            <ul class="children-list clearfix" id="itme-children1000">
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1499元起</p>
+                                </a></li>
+                               
+                            </ul>
+                            <ul class="children-list clearfix" id="itme-children1001">
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list1.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list1.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list1.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list1.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list1.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list1.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1499元起</p>
+                                </a></li>
+                               
+                            </ul>
+                            <ul class="children-list clearfix" id="itme-children1002">
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list3.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list3.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/children-list3.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="figure">
+                                        <img src="images/mi10-qingchun.webp" alt="" width="160" height="110">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1499元起</p>
+                                </a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <form action="#" class="search-form clearfix">
+                        <label for="search" class="hide">站内搜索</label>
+                        <a href="#">
+                            <input type="search" class="search-text" id="search" name="keyword" autocomplete="off" placeholder="穿戴">
+                        </a>
+                        <a href="#" class="search-btn fa fa-search">
+                            
+                        </a>
+                        <div class="keyword-list">
+                            <ul class="result-list">
+                                <li><a href="#">Redmi 9 五星高品质</a></li>
+                                <li><a href="#">小米手机</a></li>
+                                <li><a href="#">手环</a></li>
+                                <li><a href="#">小米10</a></li>
+                                <li><a href="#">全部商品</a></li>
+                                <li><a href="#">米家插线板 快充版 27W</a></li>
+                                <li><a href="#">Redmi 手环</a></li>
+                            </ul>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="xm-product-box">
+            <div class="nav-bar">
+                <div class="container">
+                    <h2>小米10</h2>
+                    <div class="con">
+                        <div class="left">
+                            <span>|</span>
+                            <a href="">
+                                小米10 Pro
+                            </a>
+                        </div>
+                        <div class="right">
+                            <a href="">概述</a>
+                            <span>|</span>
+                            <a href="">F码通道</a>
+                            <span>|</span>
+                            <a href="">咨询客服</a>
+                            <span>|</span>
+                            <a href="">用户评价</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
 </body>
 </html>

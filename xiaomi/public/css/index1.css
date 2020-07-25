@@ -1,7 +1,4 @@
-body{
-    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
-    color: #333;
-}
+
 /* 顶部黑色导航栏--site-topbar-- */
 .site-topbar{
     color: #b0b0b0;
@@ -280,7 +277,7 @@ body{
     z-index: 100;
 }
 /* 注意，.item-children是相对.site-header绝对定位 */
-.site-header .nav-item .item-children{
+/* .site-header .nav-item .item-children{ */
     /* display: none; */
     /* height: 0;
     overflow: hidden;
@@ -292,7 +289,7 @@ body{
     /* border: 1px solid red; */
     /* border-top: 1px solid #333; */
     /* transition: height .3s ease-in; */
-}
+/* } */
 .site-header .nav-item:hover .item-children{
     /* display: block; */
     height: 230px;
@@ -332,7 +329,7 @@ body{
 }
 
 
-
+/* 搜索框 */
 
 .site-header .header-search{
     float: right;
